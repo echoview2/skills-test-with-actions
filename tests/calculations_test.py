@@ -70,3 +70,21 @@ def test_get_nth_fibonacci_zero():
     def test_get_nth_fibonacci_five():
         """Test get_nth_fibonacci with n=5."""
         assert get_nth_fibonacci(5) == 5
+
+    def test_area_of_circle_negative_radius(self):
+      """Test with a negative radius to raise ValueError."""
+      # Arrange
+      radius = -1
+
+      # Act & Assert
+      with self.assertRaises(ValueError):
+          area_of_circle(radius)
+
+    def test_get_nth_fibonacci_negative(self):
+      """Test with a negative number to raise ValueError."""
+      # Arrange
+      n = -1
+
+      # Act & Assert
+      with self.assertRaises(ValueError):
+        get_nth_fibonacci(n)
